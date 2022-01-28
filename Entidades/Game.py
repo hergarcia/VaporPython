@@ -5,7 +5,7 @@ from Review import Review
 
 class Game:
 
-    def __init__(self, title, image, description, price, category, rating, review):
+    def __init__(self, title, image, description, price, category, rating, review, id):
         self.title = title
         self.image = image
         self.description = description
@@ -13,6 +13,7 @@ class Game:
         self.category = category
         self.rating = rating
         self.review = review
+        self.id = id
 
     def getRating(self):
         pass
