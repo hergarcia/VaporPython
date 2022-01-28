@@ -1,13 +1,4 @@
-from User import User
-from Client import Client
-from Admin import Admin
-from Game import Game
-from Category import Category
-from Purchase import Purchase
-from Rating import Rating
-from Review import Review
-
-
+from Entidades.Game import Game
 
 # Prueba
 g = Game("Rocket League", 50, "Flying car soccer game", 39, "Race", 5, "The best game ever", 2)
