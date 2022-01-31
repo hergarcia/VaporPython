@@ -9,9 +9,9 @@ class GameMgr:
         self.store = []
 
     #	Crear una entidad con los datos que reciba como parámetro. Deberá además asignarle un id y agregarla a la lista store. (create)
-    def create_new_game(self, id, title):
+    def create_new_game(self, title, id):
 
-        game = Game(id, title)
+        game = Game(title, id)
         self.store.append(game)
 
     # 	Dado un id, obtener esa entidad desde la lista (read, get)
@@ -23,7 +23,7 @@ class GameMgr:
             print("Game id is not in the list")
 
     # 	Dado un id, modificar los datos de esa entidad (update)
-    def update_game(self, id, new_title):
+    def update_game(self, new_title, id):
         for game in self.store:
             if game.id == id:
                 game.title = new_title

@@ -2,7 +2,7 @@
 
 class Game:
 
-    def __init__(self, id, title):
+    def __init__(self, title, id):
         self.id = id
         self.title = title
         # self.image = image
