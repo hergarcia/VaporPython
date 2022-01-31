@@ -1,7 +1,7 @@
 from Purchase import Purchase
 
 
-class PurchasewMgr:
+class PurchaseMgr:
 	def __init__(self):
 		self.store = []
 

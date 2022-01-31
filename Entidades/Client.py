@@ -2,7 +2,5 @@ from User import User
 
 
 class Client(User):
-
-    def purchasedGames(self, id):
-        self.id = id
-        pass
+    def __init__(self, username, email, password, id):
+        User.__init__(self, username, email, password, id)

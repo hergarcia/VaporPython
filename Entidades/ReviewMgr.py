@@ -1,10 +1,13 @@
 from Review import Review
+from PurchaseMgr import PurchaseMgr
 
 
 class ReviewMgr:
-	def __init__(self):
+	def __init__(self, PurchaseMgr):
 		self.store = []
+		self.PurchaseMgr = PurchaseMgr
 
+	# CRUD
 	def create_new_rating(self, review_title, date, text, id):
 
 		review = Review(review_title, date, text, id)
@@ -37,3 +40,8 @@ class ReviewMgr:
 
 	def get_reviews_stored(self):
 		return self.store
+
+
+
+	def create_review_game(self, user, game, review):
+		pass
