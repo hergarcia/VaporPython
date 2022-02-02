@@ -17,12 +17,12 @@ class UserMgr:
         else:
             print("User id is not in the list")
 
-    def update_user(self, username, email, password, id):
+    def update_user(self, new_username, new_email, new_password, id):
         for user in self.store:
             if user.id == id:
-                user.username = username
-                user.email = email
-                user.password = password
+                user.username = new_username
+                user.email = new_email
+                user.password = new_password
                 break
 
             print("User id is not in the list")

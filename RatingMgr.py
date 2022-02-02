@@ -17,11 +17,11 @@ class RatingMgr:
         else:
             print("Rating id is not in the list")
 
-    def update_rating(self, date, value, id):
+    def update_rating(self, new_date, new_value, id):
         for rating in self.store:
             if rating.id == id:
-                rating.date = date
-                rating.value = value
+                rating.date = new_date
+                rating.value = new_value
                 break
 
             print("Rating id is not in the list")

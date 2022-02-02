@@ -1,8 +1,10 @@
 from Client import Client
+from PurchaseMgr import PurchaseMgr
 
 
 class ClientMgr:
-	def __init__(self):
+	def __init__(self, purchase_mgr):
+		self.purchase_mgr = purchase_mgr
 		self.store = []
 
 	def create_new_client(self, username, email, password, id):
@@ -17,12 +19,12 @@ class ClientMgr:
 		else:
 			print("Client id is not in the list")
 
-	def update_client(self, username, email, password, id):
+	def update_client(self, new_username, new_email, new_password, id):
 		for client in self.store:
 			if client.id == id:
-				client.username = username
-				client.email = email
-				client.password = password
+				client.username = new_username
+				client.email = new_email
+				client.password = new_password
 				break
 
 			print("Client id is not in the list")
@@ -37,3 +39,10 @@ class ClientMgr:
 
 	def get_clients_stored(self):
 		return self.store
+
+	def purchased_games(self, client_id):
+		purchased_game_list = []
+		for purchase in self.purchase_mgr.get_purchases_stored():
+			if purchase.buyer == client_id:
+				purchased_game_list.append(purchase.game)
+		return purchased_game_list

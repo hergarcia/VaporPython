@@ -5,7 +5,7 @@ class PurchaseMgr:
 	def __init__(self):
 		self.store = []
 
-	def create_new_rating(self, buyer, game, price, date, id):
+	def create_new_purchase(self, buyer, game, price, date, id):
 
 		purchase = Purchase(buyer, game, price, date, id)
 		self.store.append(purchase)
@@ -17,13 +17,13 @@ class PurchaseMgr:
 		else:
 			print("Purchase id is not in the list")
 
-	def update_purchase(self, buyer, game, price, date, id):
+	def update_purchase(self, new_buyer, new_game, new_price, new_date, id):
 		for purchase in self.store:
 			if purchase.id == id:
-				purchase.buyer = buyer
-				purchase.game = game
-				purchase.price = price
-				purchase.date = date
+				purchase.buyer = new_buyer
+				purchase.game = new_game
+				purchase.price = new_price
+				purchase.date = new_date
 				break
 
 			print("Purchase id is not in the list")
@@ -36,5 +36,5 @@ class PurchaseMgr:
 		else:
 			print("Purchase id is not in the list")
 
-	def get_reviews_stored(self):
+	def get_purchases_stored(self):
 		return self.store

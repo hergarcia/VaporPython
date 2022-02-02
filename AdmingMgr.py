@@ -17,12 +17,12 @@ class AdminMgr:
 		else:
 			print("Admin id is not in the list")
 
-	def update_admin(self, username, email, password, id):
+	def update_admin(self, new_username, new_email, new_password, id):
 		for admin in self.store:
 			if admin.id == id:
-				admin.username = username
-				admin.email = email
-				admin.password = password
+				admin.username = new_username
+				admin.email = new_email
+				admin.password = new_password
 				break
 
 			print("Admin id is not in the list")
@@ -37,3 +37,4 @@ class AdminMgr:
 
 	def get_admins_stored(self):
 		return self.store
+

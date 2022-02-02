@@ -1,4 +1,4 @@
-from Entidades.Game import Game
+from Game import Game
 
 # Prueba
 g = Game("Rocket League", 50, "Flying car soccer game", 39, "Race", 5, "The best game ever", 2)

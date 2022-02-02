@@ -20,12 +20,12 @@ class ReviewMgr:
 		else:
 			print("Review id is not in the list")
 
-	def update_review(self, review_title, date, text, id):
+	def update_review(self, new_review_title, new_date, new_text, id):
 		for review in self.store:
 			if review.id == id:
-				review.review_title = review_title
-				review.date = date
-				review.text = text
+				review.review_title = new_review_title
+				review.date = new_date
+				review.text = new_text
 				break
 
 			print("Review id is not in the list")

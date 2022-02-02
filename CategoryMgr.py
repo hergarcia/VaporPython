@@ -16,10 +16,10 @@ class CategoryMgr:
 		else:
 			print("Category id is not in the list")
 
-	def update_category(self, id, cat_name):
+	def update_category(self, id, new_cat_name):
 		for category in self.store:
 			if category.id == id:
-				category.cat_name = cat_name
+				category.cat_name = new_cat_name
 				break
 		else:
 			print("Category id is not in the list")
